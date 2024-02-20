@@ -1,8 +1,8 @@
-using AbestoMediaToolKit.Models;
+using Abesto.MediaToolKit.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace AbestoMediaToolKit.Controllers
+namespace Abesto.MediaToolKit.API.Controllers
 {
     public class HomeController : Controller
     {

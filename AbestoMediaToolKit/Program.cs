@@ -1,4 +1,4 @@
-namespace AbestoMediaToolKit
+namespace Abesto.MediaToolKit.API
 {
     public class Program
     {

@@ -1,4 +1,4 @@
-namespace AbestoMediaToolKit.Models
+namespace Abesto.MediaToolKit.API.Models
 {
     public class ErrorViewModel
     {
