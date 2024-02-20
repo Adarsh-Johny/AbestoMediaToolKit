@@ -5,3 +5,5 @@
 /.vs
 /AbestoMediaToolKit/bin/Debug/net8.0
 /AbestoMediaToolKit/obj
+/Abesto.MediaToolKit.Tests/bin/Debug/net8.0
+/Abesto.MediaToolKit.Tests/obj
