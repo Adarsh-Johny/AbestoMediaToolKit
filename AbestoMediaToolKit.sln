@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbestoMediaToolKit", "AbestoMediaToolKit\AbestoMediaToolKit.csproj", "{18D3E613-6C7B-4008-8670-526F2B901C65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18D3E613-6C7B-4008-8670-526F2B901C65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18D3E613-6C7B-4008-8670-526F2B901C65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18D3E613-6C7B-4008-8670-526F2B901C65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18D3E613-6C7B-4008-8670-526F2B901C65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5E5A2D6-A4FC-458F-955F-B6790B092CC7}
+	EndGlobalSection
+EndGlobal
