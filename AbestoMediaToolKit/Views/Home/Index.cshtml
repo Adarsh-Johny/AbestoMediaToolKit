@@ -1,5 +1,57 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model Abesto.MediaToolKit.API.Models.ImageConfiguration
 
+<div class="container mt-5">
+    <h2>Media Resize Configuration</h2>
+
+    <label for="MediaType">Select Media Type:</label>
+    <select id="MediaType" class="form-control" onchange="showMediaConfig(this.value)">
+        <option value="image">Image</option>
+        <option value="video">Video (Coming soon...!)</option>
+    </select>
+
+    <div id="imageConfig" class="mt-3">
+        <h4>Image Resize Configuration</h4>
+        <form action="/Home/ResizeMedia" method="post" class="mt-3">
+            <div class="form-group">
+                <label for="imageWidth">Image Width:</label>
+                <input type="number" class="form-control" name="ImageWidth" id="imageWidth" placeholder="Enter width" required>
+            </div>
+
+            <div class="form-group">
+                <label for="imageHeight">Image Height:</label>
+                <input type="number" class="form-control" name="ImageHeight" id="imageHeight" placeholder="Enter height" required>
+            </div>
+            <div class="form-check">
+                <input type="hidden" name="MaintainAspectRatio" value="false" />
+                <input type="checkbox" name="MaintainAspectRatio" class="form-check-input" id="MaintainAspectRatio">
+                <label class="form-check-label" for="MaintainAspectRatio">Maintain Aspect Ratio</label>
+            </div>
+
+            <div class="form-check">
+                <input type="hidden" name="CanCrop" value="false" />
+                <input type="checkbox" name="CanCrop" class="form-check-input" id="CanCrop">
+                <label class="form-check-label" for="CanCrop">Can Crop</label>
+            </div>
+
+            <div class="form-group">
+                <label for="filePrefix">Name Prefix for Modified File:</label>
+                <input type="text" class="form-control" name="filePrefix" id="filePrefix" value="_thumb" placeholder="Enter prefix">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function showMediaConfig(mediaType) {
+        var imageConfig = document.getElementById("imageConfig");
+
+        if (mediaType === "image") {
+            imageConfig.style.display = "block";
+        } else {
+            imageConfig.style.display = "none";
+        }
+    }
+</script>
 

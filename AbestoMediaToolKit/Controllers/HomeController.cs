@@ -18,9 +18,10 @@ namespace Abesto.MediaToolKit.API.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        [HttpPost]
+        public IActionResult ResizeMedia(ImageConfiguration iImageConfiguration)
         {
-            return View();
+            return RedirectToAction("Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -20,3 +20,21 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.navbar-brand{
+    font-size:30px;
+    font-weight:bold;
+}
+
+.form-group{
+    padding-top:10px;
+    padding-bottom:10px
+}
+
+.form-control{
+    margin-top:5px;
+}
+
+h4{
+    text-align:center;
+}
