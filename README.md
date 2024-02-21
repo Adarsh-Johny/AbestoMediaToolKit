@@ -45,9 +45,11 @@ Use Postman to execute the program.
 
 **HTTP POST URL:**
 
-```http
+
 http://localhost:7229/api/process-image
 
+
+```
 {
     "FileSuffix": "_thumb",
     "CanCrop": true,
@@ -55,12 +57,15 @@ http://localhost:7229/api/process-image
     "ImageWidth": 600,
     "ImageHeight": 600
 }
+```
 
 Execute the request.
 
-*Note*
-You can change the output log file location from default to the same as ImageLocalFilePath from the Program.cs file instead of Directory.GetCurrentDirectory().
-Otherwise, the logfile will be created inside "~AbestoMediaToolKit\Abesto.MediaToolKit.Functions\bin\Debug\net8.0" with the name logsYYYYMMDD.txt format.
+## Note
+You can change the output log file location from default to the same as ImageLocalFilePath 
+from the Program.cs file instead of Directory.GetCurrentDirectory().
+Otherwise, the logfile will be created inside "~AbestoMediaToolKit\Abesto.MediaToolKit.Functions\bin\Debug\net8.0" 
+with the name logsYYYYMMDD.txt format.
 
 
 There are many TODOs which are the feature or things that are skipped for future works
