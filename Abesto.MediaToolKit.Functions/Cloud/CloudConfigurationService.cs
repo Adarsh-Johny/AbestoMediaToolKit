@@ -1,4 +1,4 @@
-﻿using Abesto.MediaToolKit.Functions.Amazon;
+﻿using Abesto.MediaToolKit.Functions.Cloud.Amazon;
 using Amazon.S3;
 using Microsoft.Extensions.DependencyInjection;
 

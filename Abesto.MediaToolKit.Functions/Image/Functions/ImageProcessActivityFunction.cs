@@ -5,7 +5,7 @@ using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace Abesto.MediaToolKit.Functions.Image
+namespace Abesto.MediaToolKit.Functions.Image.Functions
 {
     public class ProcessImageActivityFunction(ILoggerFactory loggerFactory, IConfiguration configuration, ICloudManager cloudManager)
         : BaseImageProcessorFunction(configuration, cloudManager)

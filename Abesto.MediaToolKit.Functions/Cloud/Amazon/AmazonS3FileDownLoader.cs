@@ -3,7 +3,7 @@ using Amazon.S3.Model;
 using Microsoft.Extensions.Logging;
 using ILogger = Microsoft.Extensions.Logging.ILogger;
 
-namespace Abesto.MediaToolKit.Functions.Amazon
+namespace Abesto.MediaToolKit.Functions.Cloud.Amazon
 {
     public class AmazonS3FileDownLoader(ICloudStorageClient cloudStorageClient, ILogger logger)
     {

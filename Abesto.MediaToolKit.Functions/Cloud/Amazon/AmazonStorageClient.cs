@@ -2,7 +2,7 @@
 using Amazon.S3;
 using Amazon.S3.Model;
 
-namespace Abesto.MediaToolKit.Functions.Amazon
+namespace Abesto.MediaToolKit.Functions.Cloud.Amazon
 {
     public class AmazonStorageClient(IAmazonS3 s3Client) : ICloudStorageClient
     {

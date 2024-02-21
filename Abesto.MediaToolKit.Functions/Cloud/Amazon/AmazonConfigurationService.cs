@@ -3,7 +3,7 @@ using Amazon.S3;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Abesto.MediaToolKit.Functions.Amazon
+namespace Abesto.MediaToolKit.Functions.Cloud.Amazon
 {
     public static class AmazonConfigurationService
     {

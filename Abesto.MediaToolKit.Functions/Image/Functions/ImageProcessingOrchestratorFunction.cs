@@ -2,7 +2,7 @@
 using Microsoft.DurableTask;
 using Microsoft.Extensions.Logging;
 
-namespace Abesto.MediaToolKit.Functions.Image
+namespace Abesto.MediaToolKit.Functions.Image.Functions
 {
     public class ImageProcessingOrchestratorFunction(ILoggerFactory loggerFactory)
     {

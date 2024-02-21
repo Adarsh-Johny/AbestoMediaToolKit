@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System.Net;
 
-namespace Abesto.MediaToolKit.Functions.Image
+namespace Abesto.MediaToolKit.Functions.Image.Functions
 {
     public class ImageToolKitFunction(ILoggerFactory loggerFactory, IConfiguration configuration, ICloudManager cloudManager)
         : BaseImageProcessorFunction(configuration, cloudManager)
