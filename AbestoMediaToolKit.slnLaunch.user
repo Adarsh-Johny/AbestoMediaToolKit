@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Name": "AbestoMediaToolKit\\Abesto.MediaToolKit.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Name": "Abesto.MediaToolKit.Functions\\Abesto.MediaToolKit.Functions.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
