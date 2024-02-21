@@ -1,7 +1,7 @@
 ﻿using Abesto.MediaToolKit.Functions.Cloud;
 using Microsoft.Extensions.Configuration;
 
-namespace Abesto.MediaToolKit.Functions.Image.Functions
+namespace Abesto.MediaToolKit.Functions.ImageProcessor.Functions
 {
     public abstract class BaseImageProcessorFunction
     {

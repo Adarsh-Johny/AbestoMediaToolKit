@@ -2,7 +2,7 @@
 using Microsoft.DurableTask;
 using Microsoft.Extensions.Logging;
 
-namespace Abesto.MediaToolKit.Functions.Image.Functions
+namespace Abesto.MediaToolKit.Functions.ImageProcessor.Functions
 {
     public class ImageProcessingOrchestratorFunction(ILoggerFactory loggerFactory)
     {
@@ -12,7 +12,7 @@ namespace Abesto.MediaToolKit.Functions.Image.Functions
         [Function("ImageProcessingOrchestrator")]
         public async Task<List<string>> RunOrchestratorAsync([OrchestrationTrigger] TaskOrchestrationContext context)
         {
-            _logger.LogInformation(" --- Orchestrator Execution Started --- ");
+            _logger.LogInformation(" -----     Orchestrator Execution Started     ----- ");
             var outputs = new List<string>();
 
             var request = context.GetInput<ImageProcessRequest>() ?? new();
@@ -23,10 +23,9 @@ namespace Abesto.MediaToolKit.Functions.Image.Functions
                 outputs.Add(image.Key);
             }
 
-            _logger.LogInformation(" --- Orchestrator Execution Completed --- ");
+            _logger.LogInformation(" -----     Orchestrator Execution Completed     ----- \n");
 
             return outputs;
         }
     }
-
 }

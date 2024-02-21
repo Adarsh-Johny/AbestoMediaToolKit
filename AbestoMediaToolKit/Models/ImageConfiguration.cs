@@ -5,8 +5,8 @@
         public MediaType MediaType { get; set; }
         public int ImageWidth { get; set; }
         public int ImageHeight { get; set; }
-        public bool MaintainAspectRatio { get; set; } = false;
-        public bool CanCrop { get; set; } = false;
-        public string FilePrefix { get; set; } = "_thumb";
+        public bool MaintainAspectRatio { get; set; } = true;
+        public bool CanCrop { get; set; } = true;
+        public string FileSuffix { get; set; } = "_thumb";
     }
 }

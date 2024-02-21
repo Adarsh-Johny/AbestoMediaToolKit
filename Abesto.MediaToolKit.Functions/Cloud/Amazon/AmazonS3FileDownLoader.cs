@@ -1,4 +1,4 @@
-﻿using Abesto.MediaToolKit.Functions.Cloud;
+﻿using Abesto.MediaToolKit.Functions.Utilities;
 using Amazon.S3.Model;
 using Microsoft.Extensions.Logging;
 using ILogger = Microsoft.Extensions.Logging.ILogger;
@@ -20,8 +20,14 @@ namespace Abesto.MediaToolKit.Functions.Cloud.Amazon
             if (imageResponse.HttpStatusCode == System.Net.HttpStatusCode.OK)
             {
                 using Stream responseStream = imageResponse.ResponseStream;
+
+                //Re generate new file path if there are duplicate files
+                localFilePath = DirectoryUtilities.GenerateFilePath(localFilePath);
+
+                //TODO Check file is actual image or not before saving
                 using FileStream fileStream = File.Create(localFilePath);
                 await responseStream.CopyToAsync(fileStream, cancellationToken);
+
                 _logger.LogInformation($"Completed downloading and saving the file - {key}");
             }
             else

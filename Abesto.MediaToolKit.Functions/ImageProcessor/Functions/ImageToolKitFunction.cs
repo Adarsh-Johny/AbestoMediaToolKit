@@ -1,4 +1,5 @@
 using Abesto.MediaToolKit.Functions.Cloud;
+using Abesto.MediaToolKit.Functions.Utilities;
 using Amazon.S3.Model;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
@@ -8,7 +9,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System.Net;
 
-namespace Abesto.MediaToolKit.Functions.Image.Functions
+namespace Abesto.MediaToolKit.Functions.ImageProcessor.Functions
 {
     public class ImageToolKitFunction(ILoggerFactory loggerFactory, IConfiguration configuration, ICloudManager cloudManager)
         : BaseImageProcessorFunction(configuration, cloudManager)
@@ -22,7 +23,7 @@ namespace Abesto.MediaToolKit.Functions.Image.Functions
         public async Task<HttpResponseData> RunAsync([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequestData request,
              [DurableClient] DurableTaskClient client, CancellationToken cancellationToken)
         {
-            _logger.LogInformation(" *** Started process-image Job *** ");
+            _logger.LogInformation(" ***********    Started process-image Job    *********** \n");
 
             string requestBody = await new StreamReader(request.Body).ReadToEndAsync(cancellationToken);
             var imageConfig = JsonConvert.DeserializeObject<ImageConfiguration>(requestBody);
@@ -57,7 +58,7 @@ namespace Abesto.MediaToolKit.Functions.Image.Functions
             var response = request.CreateResponse(HttpStatusCode.OK);
             response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
 
-            _logger.LogInformation(" *** Ended process-image Job *** ");
+            _logger.LogInformation(" ***********    Ended process-image Job    *********** \n");
 
             return response;
         }

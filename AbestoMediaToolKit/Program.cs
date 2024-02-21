@@ -1,3 +1,5 @@
+using Refit;
+
 namespace Abesto.MediaToolKit.API
 {
     public class Program
@@ -9,6 +11,7 @@ namespace Abesto.MediaToolKit.API
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            ConfigureServices(builder.Services);
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -31,6 +34,14 @@ namespace Abesto.MediaToolKit.API
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
+        }
+
+
+        private static void ConfigureServices(IServiceCollection services)
+        {
+            //TODO Take URL from Config file
+            services.AddRefitClient<IApiClient>()
+                .ConfigureHttpClient(c => c.BaseAddress = new Uri("http://localhost:7229/"));
         }
     }
 }

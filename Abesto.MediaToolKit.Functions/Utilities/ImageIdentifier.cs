@@ -1,10 +1,11 @@
 ﻿using Amazon.S3.Model;
 
-namespace Abesto.MediaToolKit.Functions.Image
+namespace Abesto.MediaToolKit.Functions.Utilities
 {
     public static class ImageIdentifier
     {
-        private static string[] _imageFormats = { ".bmp", ".gif", ".jpeg", ".jpg", ".png", ".tiff" };
+        //TODO move this to config
+        private static string[] _imageFormats = { ".bmp", ".gif", ".jpeg", ".jpg", ".png" };
         public static IEnumerable<S3Object> FindImages(this List<S3Object>? s3Objects)
         {
             if (s3Objects == null || s3Objects.Count == 0)

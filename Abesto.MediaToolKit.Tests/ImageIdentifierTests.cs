@@ -1,4 +1,4 @@
-﻿using Abesto.MediaToolKit.Functions.Image;
+﻿using Abesto.MediaToolKit.Functions.Utilities;
 using Amazon.S3.Model;
 using FluentAssertions;
 

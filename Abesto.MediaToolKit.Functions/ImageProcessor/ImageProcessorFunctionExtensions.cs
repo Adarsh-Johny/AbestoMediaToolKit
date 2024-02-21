@@ -1,6 +1,6 @@
 ﻿using Amazon.S3.Model;
 
-namespace Abesto.MediaToolKit.Functions.Image
+namespace Abesto.MediaToolKit.Functions.ImageProcessor
 {
     public static class ImageProcessorFunctionExtensions
     {
