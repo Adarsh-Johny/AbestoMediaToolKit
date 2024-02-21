@@ -11,7 +11,7 @@ namespace Abesto.MediaToolKit.Functions.ImageProcessor.Functions
         : BaseImageProcessorFunction(configuration, cloudManager)
     {
         private readonly ILogger _logger = loggerFactory.CreateLogger<ProcessImageActivityFunction>();
-        private readonly string _basePath = configuration.GetValue<string>("ImageLocalFilePath") ?? Environment.CurrentDirectory;
+        private readonly string _basePath = configuration.GetValue<string>("ImageLocalFilePath") ?? Directory.GetCurrentDirectory();
 
         [Function("ProcessImageActivityFunction")]
         public async Task RunAsync([ActivityTrigger] ImageProcessRequest request, CancellationToken cancellationToken)

@@ -12,7 +12,7 @@ var host = new HostBuilder()
         services.ConfigureFunctionsApplicationInsights();
 
         Log.Logger = new LoggerConfiguration()
-            .WriteTo.File(Environment.CurrentDirectory, rollingInterval: RollingInterval.Day) //TODO Make it from configuration
+            .WriteTo.File(Path.Combine(Directory.GetCurrentDirectory(),"logs.txt"), rollingInterval: RollingInterval.Day) //TODO Make it from configuration
             .CreateLogger();
 
         services.AddLogging(loggingBuilder => loggingBuilder.AddSerilog());
