@@ -16,13 +16,13 @@ namespace Abesto.MediaToolKit.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> ResizeMedia(ImageConfiguration iImageConfiguration)
+        public IActionResult ResizeMedia(ImageConfiguration iImageConfiguration)
         {
             try
             {
-                var result = await _apiClient.ResizeMedia(iImageConfiguration);
-                
-                //TODO process the results and show the progress UI
+                _apiClient.ResizeMedia(iImageConfiguration);
+
+                // TODO: Process the results and show the progress UI
 
                 return RedirectToAction("Index");
             }
