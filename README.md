@@ -21,6 +21,7 @@ Utilities to alter media - Image resize.
 2. Open the solution file (`AbestoMediaToolKit.sln`) in Visual Studio.
 3. Set `Abesto.MediaToolKit.Functions` as the starting project.
 4. Open the `local.settings.json` file and add the following configurations:
+If `local.settings.json` is not found, please add it at the same level of `host.json` file
 
     ```json
     {
@@ -37,7 +38,7 @@ Utilities to alter media - Image resize.
     }
     ```
 
-5. Run the project.
+6. Run the project.
 
 ## Usage
 
