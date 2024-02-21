@@ -1,10 +1,10 @@
 # AbestoMediaToolKit
 
-Utilities to alter media.
+Utilities to alter media - Image resize.
 
 ## Technologies Used
 
-- .NET Core 8.0
+- .NET Core 8.0 SDK
 - Abesto.MediaToolKit.API (ASP.NET Core 8.0)
 - Abesto.MediaToolKit.Functions (Azure Functions)
 
@@ -68,6 +68,9 @@ Otherwise, the logfile will be created inside "~AbestoMediaToolKit\Abesto.MediaT
 with the name logsYYYYMMDD.txt format.
 
 
-There are many TODOs which are the feature or things that are skipped for future works
+There are many TODOs which are the feature or things that are skipped for future works.
+
 Also the project Abesto.MediaToolKit.Functions can be run and it has a UI with the same options of the JSON provided in the API and on submitting the request it will call the function.
+But its not completed yet.
+
 Note: Make sure both the projects are running.
